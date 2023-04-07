@@ -14,7 +14,7 @@ export default function Header() {
 			<div>
 				<h1 className="text-4xl">To Do List</h1>
 				<p className="text-zinc-400">
-					로그인은 구현하지 않아서 모두가 게시, 수정, 삭제가 가능.
+					로그인은 구현하지 않아서 모두가 게시, 수정, 삭제가 가능합니다.
 				</p>
 			</div>
 			<Button name={"Add"} onClick={handleAdd} />
