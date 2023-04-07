@@ -22,7 +22,8 @@ export default function Input() {
 	const dispatch = useDispatch();
 	const { addToDo, updateToDo } = useToDo();
 
-	const initialToDo = prevToDo ? prevToDo : defaultToDo;
+	const initialToDo =
+		prevToDo && whichModal === "Update" ? prevToDo : defaultToDo;
 	const [toDo, setToDo] = useState<IToDo>(initialToDo);
 
 	const handleInput = (

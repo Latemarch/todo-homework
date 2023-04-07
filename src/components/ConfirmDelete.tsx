@@ -10,7 +10,6 @@ export default function ConfirmDelete() {
 	const { removeToDo } = useToDo();
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		const name = e.currentTarget.name;
-		console.log(name);
 		if (name === "Delete") {
 			toDo && removeToDo.mutate(toDo.id);
 		}
