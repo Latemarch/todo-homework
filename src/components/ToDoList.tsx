@@ -7,7 +7,7 @@ export default function ToDoList() {
 		toDoQuery: { data: ToDos, isLoading },
 	} = useToDo();
 	return (
-		<ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+		<ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
 			{isLoading && <p className="text-2xl">isLoading...</p>}
 			{ToDos &&
 				ToDos.sort((a, b) => b.createdAt - a.createdAt).map((toDo) => (

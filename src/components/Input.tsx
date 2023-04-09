@@ -13,7 +13,7 @@ const defaultToDo = {
 	isCompleted: false,
 };
 
-const inputStyle = "bg-gray-400 ";
+const inputStyle = "bg-gray-200 border-b border-zinc-500 focus:outline-none";
 
 export default function Input() {
 	const { whichModal, toDo: prevToDo } = useSelector<IStates>(
@@ -30,6 +30,7 @@ export default function Input() {
 		e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
 	) => {
 		const { name, value } = e.target;
+		if (name === "body" && value.length > 70) return;
 		setToDo({ ...toDo, [name]: value });
 	};
 
@@ -56,11 +57,12 @@ export default function Input() {
 			<div className="flex flex-col">
 				Detail:
 				<textarea
-					className={inputStyle} //
+					className={`${inputStyle} ring ring-zinc-500/50 focus:outline-zinc-500/50 mt-1`} //
 					name="body"
 					value={toDo.body}
 					onChange={handleInput}
 				/>
+				<p>{`${toDo.body.length}/70`}</p>
 			</div>
 			<div className="flex justify-end w-full">
 				<Button name={whichModal} onClick={handleClick} />

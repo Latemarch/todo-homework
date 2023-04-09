@@ -18,7 +18,7 @@ export default function ConfirmDelete() {
 	return (
 		<div className="relative flex justify-center items-center w-full h-32">
 			<div className="flex w-full justify-center text-black mb-4 ">
-				Delete To Do ?
+				Delete "To Do"?
 			</div>
 			<div className="absolute flex inset-0 items-end justify-end mr-4 mb-2 text-zinc-500">
 				<Button name={"Delete"} onClick={handleClick} />
